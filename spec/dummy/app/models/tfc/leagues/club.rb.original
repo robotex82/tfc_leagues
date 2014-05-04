@@ -1,0 +1,3 @@
+class Tfc::Leagues::Club < ActiveRecord::Base
+  attr_accessible :description, :markup_language, :name, :slug
+end

@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    models:
+      tfc/leagues/club:
+        one: club
+        other: clubs
+      tfc/leagues/federation:
+        one: federation
+        other: federations
+      tfc/leagues/league:
+        one: league
+        other: leagues
+      tfc/leagues/matchday:
+        one: matchday
+        other: matchday
+      tfc/leagues/season:
+        one: season
+        other: seasons
+      tfc/leagues/team:
+        one: team
+        other: teams
+      tfc/leagues/team_membership:
+        one: team membership
+        other: team memberships
+  tfc:
+    leagues:
+      active_admin:
+        menu: "Leagues"

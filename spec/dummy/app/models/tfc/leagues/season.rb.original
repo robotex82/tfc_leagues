@@ -1,0 +1,4 @@
+class Tfc::Leagues::Season < ActiveRecord::Base
+  belongs_to :league
+  attr_accessible :description, :markup_language, :name, :slug
+end

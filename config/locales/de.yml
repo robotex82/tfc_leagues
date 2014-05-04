@@ -1,0 +1,28 @@
+de:
+  activerecord:
+    models:
+      tfc/leagues/club:
+        one: Verein
+        other: Vereine
+      tfc/leagues/federation:
+        one: Verband
+        other: Verbände
+      tfc/leagues/league:
+        one: Liga
+        other: Ligen
+      tfc/leagues/matchday:
+        one: Spieltag
+        other: Spieltage
+      tfc/leagues/season:
+        one: Saison
+        other: Saisons
+      tfc/leagues/team:
+        one: Mannschaft
+        other: Mannschaften
+      tfc/leagues/team_membership:
+        one: Spielermeldung
+        other: Spielermeldung
+  tfc:
+    leagues:
+      active_admin:
+        menu: "Ligabetrieb"

@@ -1,0 +1,4 @@
+class Tfc::Leagues::TeamMembership < ActiveRecord::Base
+  belongs_to :team
+  attr_accessible :membershipable
+end

@@ -1,0 +1,4 @@
+class Tfc::Leagues::Matchday < ActiveRecord::Base
+  belongs_to :season
+  attr_accessible :description, :markup_language, :sequential_number, :slug
+end
