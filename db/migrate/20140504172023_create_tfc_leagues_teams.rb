@@ -12,5 +12,6 @@ class CreateTfcLeaguesTeams < ActiveRecord::Migration
     end
     add_index :tfc_leagues_teams, :club_id
     add_index :tfc_leagues_teams, :season_id
+    add_index :tfc_leagues_teams, :slug, :unique => true
   end
 end

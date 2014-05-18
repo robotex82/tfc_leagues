@@ -1,0 +1,327 @@
+
+--- 
+admin_users: 
+  columns: 
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - admin@example.com
+    - $2a$10$AsdzqPhUJUWtjfTS/o4eWOgHyL2sKTrTDBQ/5I4ALs3dXslfO99F.
+    - 
+    - 
+    - 
+    - 1
+    - 2014-05-04 16:02:01.237262
+    - 2014-05-04 16:02:01.237262
+    - 192.168.0.36
+    - 192.168.0.36
+    - 2014-05-04 15:57:52.020089
+    - 2014-05-04 16:02:01.237934
+
+--- 
+tfc_leagues_federations: 
+  columns: 
+  - id
+  - name
+  - description
+  - markup_language
+  - slug
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - TFVH
+    - ""
+    - textile
+    - tfvh
+    - 2014-05-04 16:02:11.582210
+    - 2014-05-04 16:02:11.582210
+
+--- 
+tfc_leagues_leagues: 
+  columns: 
+  - id
+  - name
+  - description
+  - markup_language
+  - slug
+  - federation_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - "Hessen S\xC3\xBCd"
+    - ""
+    - textile
+    - hessen-sud
+    - 1
+    - 2014-05-04 16:04:13.285111
+    - 2014-05-04 16:04:13.285111
+
+--- 
+tfc_leagues_seasons: 
+  columns: 
+  - id
+  - name
+  - description
+  - markup_language
+  - slug
+  - league_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - "2014"
+    - ""
+    - textile
+    - "2014"
+    - 1
+    - 2014-05-04 16:16:54.627847
+    - 2014-05-04 16:16:54.627847
+  - - 2
+    - "2013"
+    - ""
+    - textile
+    - "2013"
+    - 1
+    - 2014-05-04 16:58:24.124611
+    - 2014-05-04 16:58:24.124611
+  - - 3
+    - "2012"
+    - ""
+    - textile
+    - "2012"
+    - 1
+    - 2014-05-04 16:58:32.330939
+    - 2014-05-04 16:58:32.330939
+
+--- 
+tfc_leagues_matchdays: 
+  columns: 
+  - id
+  - sequential_number
+  - description
+  - markup_language
+  - slug
+  - season_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - ""
+    - textile
+    - "1"
+    - 1
+    - 2014-05-04 16:55:40.967800
+    - 2014-05-04 16:55:40.967800
+  - - 2
+    - 2
+    - ""
+    - textile
+    - "2"
+    - 1
+    - 2014-05-04 16:58:40.797740
+    - 2014-05-04 16:58:40.797740
+  - - 3
+    - 3
+    - ""
+    - textile
+    - "3"
+    - 1
+    - 2014-05-04 16:58:43.588145
+    - 2014-05-04 16:58:43.588145
+  - - 4
+    - 4
+    - ""
+    - textile
+    - "4"
+    - 1
+    - 2014-05-04 16:58:47.168885
+    - 2014-05-04 16:58:47.168885
+  - - 5
+    - 5
+    - ""
+    - textile
+    - "5"
+    - 1
+    - 2014-05-04 16:58:50.689846
+    - 2014-05-04 16:58:50.689846
+  - - 6
+    - 6
+    - ""
+    - textile
+    - "6"
+    - 1
+    - 2014-05-04 16:58:54.515803
+    - 2014-05-04 16:58:54.515803
+  - - 7
+    - 7
+    - ""
+    - textile
+    - "7"
+    - 1
+    - 2014-05-04 16:58:56.961128
+    - 2014-05-04 16:58:56.961128
+  - - 8
+    - 8
+    - ""
+    - textile
+    - "8"
+    - 1
+    - 2014-05-04 16:58:59.289727
+    - 2014-05-04 16:58:59.289727
+  - - 9
+    - 9
+    - ""
+    - textile
+    - "9"
+    - 1
+    - 2014-05-04 16:59:01.811748
+    - 2014-05-04 16:59:01.811748
+  - - 10
+    - 10
+    - ""
+    - textile
+    - "10"
+    - 1
+    - 2014-05-04 16:59:05.601309
+    - 2014-05-04 16:59:05.601309
+  - - 11
+    - 11
+    - ""
+    - textile
+    - "11"
+    - 1
+    - 2014-05-04 16:59:08.174722
+    - 2014-05-04 16:59:08.174722
+  - - 12
+    - 12
+    - ""
+    - textile
+    - "12"
+    - 1
+    - 2014-05-04 16:59:10.803622
+    - 2014-05-04 16:59:10.803622
+  - - 13
+    - 13
+    - ""
+    - textile
+    - "13"
+    - 1
+    - 2014-05-04 16:59:13.040176
+    - 2014-05-04 16:59:13.040176
+  - - 14
+    - 14
+    - ""
+    - textile
+    - "14"
+    - 1
+    - 2014-05-04 16:59:15.997537
+    - 2014-05-04 16:59:15.997537
+
+--- 
+tfc_leagues_clubs: 
+  columns: 
+  - id
+  - name
+  - description
+  - markup_language
+  - slug
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1. TFC Frankfurt
+    - ""
+    - textile
+    - 1-tfc-frankfurt
+    - 2014-05-04 17:08:31.876256
+    - 2014-05-04 17:08:31.876256
+
+--- 
+tfc_leagues_teams: 
+  columns: 
+  - id
+  - sequential_number
+  - description
+  - markup_language
+  - slug
+  - club_id
+  - season_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - ""
+    - textile
+    - "1"
+    - 1
+    - 1
+    - 2014-05-04 17:33:27.269372
+    - 2014-05-04 17:33:27.269372
+  - - 2
+    - 2
+    - ""
+    - textile
+    - "2"
+    - 1
+    - 1
+    - 2014-05-04 17:33:30.612295
+    - 2014-05-04 17:33:30.612295
+  - - 3
+    - 3
+    - ""
+    - textile
+    - "3"
+    - 1
+    - 1
+    - 2014-05-04 17:33:33.011080
+    - 2014-05-04 17:33:33.011080
+
+--- 
+tfc_leagues_team_memberships: 
+  columns: 
+  - id
+  - team_id
+  - membershipable_id
+  - membershipable_type
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - 1
+    - Player
+    - 2014-05-04 22:04:48.188345
+    - 2014-05-04 22:04:48.188345
+
+--- 
+players: 
+  columns: 
+  - id
+  - firstname
+  - lastname
+  - email
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Roberto
+    - Vasquez Angel
+    - roberto@vasquez-angel.de
+    - 2014-05-04 21:57:04.759372
+    - 2014-05-04 21:57:04.759372

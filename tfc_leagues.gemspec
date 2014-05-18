@@ -25,6 +25,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency "thin"
   s.add_development_dependency "quiet_assets"
 
+  # Development Tools
+  s.add_development_dependency "rails-erd"
+
   # Documentation
   s.add_development_dependency "yard"
 
@@ -36,6 +39,9 @@ Gem::Specification.new do |s|
 
   # Localization
   s.add_development_dependency 'localeapp'
+
+  # Data Tools
+  s.add_development_dependency 'yaml_db'
 
   # Tests
   s.add_development_dependency 'capybara'

@@ -7,6 +7,7 @@ ActiveAdmin.register Tfc::Leagues::Matchday do
     f.inputs do
       f.input :season
       f.input :sequential_number
+      f.input :scheduled_at
     end
 
     f.inputs do

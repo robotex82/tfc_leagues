@@ -2,6 +2,12 @@ class Tfc::Leagues::Team < ActiveRecord::Base
   # associations
   belongs_to :club
   belongs_to :season
+  has_many :home_matches, :class_name  => 'Tfc::Leagues::Match',
+                          :foreign_key => 'home_team_id',
+                          :dependent   => :restrict
+  has_many :guest_matches, :class_name  => 'Tfc::Leagues::Match',
+                           :foreign_key => 'guest_team_id',
+                           :dependent   => :restrict
 
   # attributes
   attr_accessible :club_id, :description, :markup_language, :sequential_number, :season_id, :slug

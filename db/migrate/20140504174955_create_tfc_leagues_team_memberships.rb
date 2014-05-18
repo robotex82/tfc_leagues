@@ -8,5 +8,6 @@ class CreateTfcLeaguesTeamMemberships < ActiveRecord::Migration
     end
     add_index :tfc_leagues_team_memberships, :team_id
     add_index :tfc_leagues_team_memberships, [ :membershipable_type, :membershipable_id ], :name => 'index_tfc_leagues_team_memberships_on_membershipable_type_and_id'
+    add_index :tfc_leagues_team_memberships, :slug, :unique => true
   end
 end

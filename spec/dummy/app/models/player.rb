@@ -1,4 +1,7 @@
 class Player < ActiveRecord::Base
+  has_many :team_memberships, :as => :membershipable,
+                              :class_name => 'Tfc::Leagues::TeamMembership'
+
   attr_accessible :email, :firstname, :lastname
 
   validates :firstname, :lastname, :email, :presence => true

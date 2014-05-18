@@ -10,8 +10,10 @@ require "sprockets/railtie"
 
 Bundler.require
 require "quiet_assets"
+require "rails_erd"
 require "activeadmin"
 require "i18n_routing"
+require "yaml_db"
 require "tfc_leagues"
 
 module Dummy

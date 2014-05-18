@@ -4,6 +4,8 @@ describe Tfc::Leagues::Team do
   describe 'associations' do
     it { should belong_to :club }
     it { should belong_to :season }
+    it { should have_many :home_matches }
+    it { should have_many :guest_matches }
   end # describe
 
   describe 'validations' do

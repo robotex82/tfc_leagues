@@ -9,7 +9,7 @@ class CreateTfcLeaguesSeasons < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :tfc_leagues_seasons, :slug, :unique => true
     add_index :tfc_leagues_seasons, :league_id
+    add_index :tfc_leagues_seasons, :slug, :unique => true
   end
 end

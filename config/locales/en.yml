@@ -10,9 +10,12 @@ en:
       tfc/leagues/league:
         one: league
         other: leagues
+      tfc/leagues/match:
+        one: match
+        other: matches
       tfc/leagues/matchday:
         one: matchday
-        other: matchday
+        other: matchdays
       tfc/leagues/season:
         one: season
         other: seasons

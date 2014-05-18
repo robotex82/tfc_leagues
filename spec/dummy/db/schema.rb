@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140504214754) do
+ActiveRecord::Schema.define(:version => 20140505181434) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(:version => 20140504214754) do
   create_table "tfc_leagues_matchdays", :force => true do |t|
     t.integer  "sequential_number"
     t.text     "description"
+    t.datetime "scheduled_at"
     t.string   "markup_language"
     t.string   "slug"
     t.integer  "season_id"
@@ -104,6 +105,24 @@ ActiveRecord::Schema.define(:version => 20140504214754) do
 
   add_index "tfc_leagues_matchdays", ["season_id"], :name => "index_tfc_leagues_matchdays_on_season_id"
   add_index "tfc_leagues_matchdays", ["slug"], :name => "index_tfc_leagues_matchdays_on_slug", :unique => true
+
+  create_table "tfc_leagues_matches", :force => true do |t|
+    t.datetime "scheduled_at"
+    t.datetime "played_at"
+    t.integer  "matchday_id"
+    t.integer  "home_team_id"
+    t.integer  "home_team_score"
+    t.integer  "guest_team_id"
+    t.integer  "guest_team_score"
+    t.string   "slug"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "tfc_leagues_matches", ["guest_team_id"], :name => "index_tfc_leagues_matches_on_guest_team_id"
+  add_index "tfc_leagues_matches", ["home_team_id"], :name => "index_tfc_leagues_matches_on_home_team_id"
+  add_index "tfc_leagues_matches", ["matchday_id"], :name => "index_tfc_leagues_matches_on_matchday_id"
+  add_index "tfc_leagues_matches", ["slug"], :name => "index_tfc_leagues_matches_on_slug", :unique => true
 
   create_table "tfc_leagues_seasons", :force => true do |t|
     t.string   "name"

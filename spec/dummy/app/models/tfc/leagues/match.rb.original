@@ -1,0 +1,6 @@
+class Tfc::Leagues::Match < ActiveRecord::Base
+  belongs_to :matchday
+  belongs_to :home_team
+  belongs_to :guest_team
+  attr_accessible :guest_team_score, :home_team_score, :played_at, :scheduled_at, :slug
+end

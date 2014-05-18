@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Player do
   describe 'associations' do
+    it { should have_many :team_memberships }
   end # describe
 
   describe 'validations' do

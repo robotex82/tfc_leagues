@@ -1,6 +1,7 @@
 class Tfc::Leagues::Matchday < ActiveRecord::Base
   # associations
   belongs_to :season
+  has_many :matches, :dependent => :restrict
 
   # attributes
   attr_accessible :description, :markup_language, :sequential_number, :season_id, :slug
@@ -17,6 +18,7 @@ class Tfc::Leagues::Matchday < ActiveRecord::Base
                  :columns  => [ :description ]
 
   # validations
+  validates :scheduled_at, :presence => true
   validates :season, :presence => true
   validates :sequential_number, :presence => true,
                                 :uniqueness => { :scope => [ :season_id ] }
