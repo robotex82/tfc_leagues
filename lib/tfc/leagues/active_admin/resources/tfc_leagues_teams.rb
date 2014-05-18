@@ -6,7 +6,7 @@ ActiveAdmin.register Tfc::Leagues::Team do
   form do |f|
     f.inputs do
       f.input :club
-      f.input :season
+      f.input :season, :as => :select, :collection => option_groups_from_collection_for_select(Tfc::Leagues::League.all, :seasons, :to_s, :id, :to_s)
       f.input :sequential_number
     end
 

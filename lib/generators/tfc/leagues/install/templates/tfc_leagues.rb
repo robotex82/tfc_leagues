@@ -11,6 +11,6 @@ Tfc::Leagues.configure do |config|
 
   # Membershipable class
   #
-  # default: config.membershipable_class_name = 'Player'
-  config.membershipable_class_name = 'Player'
+  # default: config.player_class_name = 'Player'
+  config.player_class_name = 'Player'
 end

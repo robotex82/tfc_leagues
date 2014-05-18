@@ -3,6 +3,11 @@ require 'tfc/leagues/active_admin/base'
 ActiveAdmin.register Tfc::Leagues::Season do
   Tfc::Leagues::ActiveAdmin::Base.configure(self)
 
+  collection_action :teams_for_select do
+    @items = Tfc::Leagues::Season.find(params[:id]).teams
+    render 'cascade_select/options_for_select', :layout => false
+  end
+
   form do |f|
     f.inputs do
       f.input :league

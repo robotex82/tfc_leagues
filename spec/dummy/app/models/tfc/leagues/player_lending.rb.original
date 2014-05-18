@@ -1,0 +1,7 @@
+class Tfc::Leagues::PlayerLending < ActiveRecord::Base
+  belongs_to :match
+  belongs_to :source_team
+  belongs_to :target_team
+  belongs_to :player
+  # attr_accessible :title, :body
+end

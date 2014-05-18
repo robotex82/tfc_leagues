@@ -16,6 +16,9 @@ de:
       tfc/leagues/matchday:
         one: Spieltag
         other: Spieltage
+      tfc/leagues/player_lending:
+        one: Teamtausch
+        other: Teamtäusche
       tfc/leagues/season:
         one: Saison
         other: Saisons

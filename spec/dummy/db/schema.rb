@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140505181434) do
+ActiveRecord::Schema.define(:version => 20140518111048) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20140505181434) do
   end
 
   add_index "tfc_leagues_clubs", ["name"], :name => "index_tfc_leagues_clubs_on_name", :unique => true
+  add_index "tfc_leagues_clubs", ["slug"], :name => "index_tfc_leagues_clubs_on_slug", :unique => true
 
   create_table "tfc_leagues_federations", :force => true do |t|
     t.string   "name"
@@ -124,6 +125,21 @@ ActiveRecord::Schema.define(:version => 20140505181434) do
   add_index "tfc_leagues_matches", ["matchday_id"], :name => "index_tfc_leagues_matches_on_matchday_id"
   add_index "tfc_leagues_matches", ["slug"], :name => "index_tfc_leagues_matches_on_slug", :unique => true
 
+  create_table "tfc_leagues_player_lendings", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "source_team_id"
+    t.integer  "target_team_id"
+    t.integer  "player_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "tfc_leagues_player_lendings", ["match_id", "source_team_id", "target_team_id", "player_id"], :name => "index_tfc_leagues_player_lendings_on_all_ids"
+  add_index "tfc_leagues_player_lendings", ["match_id"], :name => "index_tfc_leagues_player_lendings_on_match_id"
+  add_index "tfc_leagues_player_lendings", ["player_id"], :name => "index_tfc_leagues_player_lendings_on_player_id"
+  add_index "tfc_leagues_player_lendings", ["source_team_id"], :name => "index_tfc_leagues_player_lendings_on_source_team_id"
+  add_index "tfc_leagues_player_lendings", ["target_team_id"], :name => "index_tfc_leagues_player_lendings_on_target_team_id"
+
   create_table "tfc_leagues_seasons", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -139,13 +155,12 @@ ActiveRecord::Schema.define(:version => 20140505181434) do
 
   create_table "tfc_leagues_team_memberships", :force => true do |t|
     t.integer  "team_id"
-    t.integer  "membershipable_id"
-    t.string   "membershipable_type"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.integer  "player_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  add_index "tfc_leagues_team_memberships", ["membershipable_type", "membershipable_id"], :name => "index_tfc_leagues_team_memberships_on_membershipable_type_and_id"
+  add_index "tfc_leagues_team_memberships", ["player_id"], :name => "index_tfc_leagues_team_memberships_on_player_id"
   add_index "tfc_leagues_team_memberships", ["team_id"], :name => "index_tfc_leagues_team_memberships_on_team_id"
 
   create_table "tfc_leagues_teams", :force => true do |t|
@@ -161,5 +176,6 @@ ActiveRecord::Schema.define(:version => 20140505181434) do
 
   add_index "tfc_leagues_teams", ["club_id"], :name => "index_tfc_leagues_teams_on_club_id"
   add_index "tfc_leagues_teams", ["season_id"], :name => "index_tfc_leagues_teams_on_season_id"
+  add_index "tfc_leagues_teams", ["slug"], :name => "index_tfc_leagues_teams_on_slug", :unique => true
 
 end

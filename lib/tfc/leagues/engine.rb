@@ -4,6 +4,8 @@ module Tfc
       initializer :tfc_leagues_engine do |application|
         ::ActiveAdmin.setup do |config|
           config.load_paths << File.expand_path('../active_admin/resources', __FILE__)
+          config.register_javascript 'tfc_leagues.js'
+          config.register_stylesheet 'tfc_leagues.css'
         end # ActiveAdmin.setup
       end # intializer
 

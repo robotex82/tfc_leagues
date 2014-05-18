@@ -15,12 +15,12 @@ module Tfc
       mattr_accessor :markup_languages
       @@markup_languages = []
 
-      mattr_accessor :membershipable_class_name
+      mattr_accessor :player_class_name
       @@person_class_name = 'Player'
 
-      def self.membershipable_class_name=(class_name)
-        raise MembershipableClassNotDefinedError unless Object.const_defined?(class_name)
-        @@membershipable_class_name = class_name.constantize
+      def self.player_class_name=(class_name)
+        raise PlayerClassNotDefinedError unless Object.const_defined?(class_name)
+        @@player_class_name = class_name.constantize
       end # def
     end # module Configuration
   end # module Leagues

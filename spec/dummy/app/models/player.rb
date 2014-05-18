@@ -1,6 +1,5 @@
 class Player < ActiveRecord::Base
-  has_many :team_memberships, :as => :membershipable,
-                              :class_name => 'Tfc::Leagues::TeamMembership'
+  has_many :team_memberships, :class_name => 'Tfc::Leagues::TeamMembership'
 
   attr_accessible :email, :firstname, :lastname
 

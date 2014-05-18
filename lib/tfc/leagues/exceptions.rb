@@ -1,6 +1,6 @@
 module Ecm
   module Staff
-    EXCEPTIONS = %w[ MembershipableClassNotDefinedError ]
+    EXCEPTIONS = %w[ PlayerClassNotDefinedError ]
 
     EXCEPTIONS.each { |exception| const_set(exception, Class.new(StandardError)) }
   end # module Staff

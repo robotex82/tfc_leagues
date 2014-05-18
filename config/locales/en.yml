@@ -16,6 +16,9 @@ en:
       tfc/leagues/matchday:
         one: matchday
         other: matchdays
+      tfc/leagues/player_lending:
+        one: player lending
+        other: player lendings
       tfc/leagues/season:
         one: season
         other: seasons
